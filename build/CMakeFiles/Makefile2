@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/beaurogers/Documents/C++_Programming/Appa_Security/bui
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ColoredButtonsApp.dir/all
+all: CMakeFiles/ButtonApp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ColoredButtonsApp.dir/clean
+clean: CMakeFiles/ButtonApp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ColoredButtonsApp.dir
+# Target rules for target CMakeFiles/ButtonApp.dir
 
 # All Build rule for target.
-CMakeFiles/ColoredButtonsApp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles --progress-num=1,2,3 "Built target ColoredButtonsApp"
-.PHONY : CMakeFiles/ColoredButtonsApp.dir/all
+CMakeFiles/ButtonApp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles --progress-num=1,2,3 "Built target ButtonApp"
+.PHONY : CMakeFiles/ButtonApp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ColoredButtonsApp.dir/rule: cmake_check_build_system
+CMakeFiles/ButtonApp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ColoredButtonsApp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ButtonApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles 0
-.PHONY : CMakeFiles/ColoredButtonsApp.dir/rule
+.PHONY : CMakeFiles/ButtonApp.dir/rule
 
 # Convenience name for target.
-ColoredButtonsApp: CMakeFiles/ColoredButtonsApp.dir/rule
-.PHONY : ColoredButtonsApp
+ButtonApp: CMakeFiles/ButtonApp.dir/rule
+.PHONY : ButtonApp
 
 # clean rule for target.
-CMakeFiles/ColoredButtonsApp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/clean
-.PHONY : CMakeFiles/ColoredButtonsApp.dir/clean
+CMakeFiles/ButtonApp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/clean
+.PHONY : CMakeFiles/ButtonApp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

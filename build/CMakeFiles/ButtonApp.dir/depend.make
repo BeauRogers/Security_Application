@@ -1,2 +1,2 @@
-# Empty dependencies file for ColoredButtonsApp.
+# Empty dependencies file for ButtonApp.
 # This may be replaced when dependencies are built.

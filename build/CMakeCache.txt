@@ -14,6 +14,15 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+ButtonApp_BINARY_DIR:STATIC=/Users/beaurogers/Documents/C++_Programming/Appa_Security/build
+
+//Value Computed by CMake
+ButtonApp_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+ButtonApp_SOURCE_DIR:STATIC=/Users/beaurogers/Documents/C++_Programming/Appa_Security
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -143,7 +152,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ColoredButtonsApp
+CMAKE_PROJECT_NAME:STATIC=ButtonApp
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -206,18 +215,6 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
-
-//Value Computed by CMake
-ColoredButtonsApp_BINARY_DIR:STATIC=/Users/beaurogers/Documents/C++_Programming/Appa_Security/build
-
-//Value Computed by CMake
-ColoredButtonsApp_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-ColoredButtonsApp_SOURCE_DIR:STATIC=/Users/beaurogers/Documents/C++_Programming/Appa_Security
-
-//The directory containing a CMake configuration file for SFML.
-SFML_DIR:PATH=/opt/homebrew/lib/cmake/SFML
 
 //Path to a file.
 SFML_DOC_DIR:PATH=/opt/homebrew/share/doc/SFML

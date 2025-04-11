@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ColoredButtonsApp
+# Target rules for targets named ButtonApp
 
 # Build rule for target.
-ColoredButtonsApp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ColoredButtonsApp
-.PHONY : ColoredButtonsApp
+ButtonApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ButtonApp
+.PHONY : ButtonApp
 
 # fast build rule for target.
-ColoredButtonsApp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/build
-.PHONY : ColoredButtonsApp/fast
+ButtonApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/build
+.PHONY : ButtonApp/fast
 
 api/api_interface.o: api/api_interface.cpp.o
 .PHONY : api/api_interface.o
 
 # target to build an object file
 api/api_interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/api/api_interface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o
 .PHONY : api/api_interface.cpp.o
 
 api/api_interface.i: api/api_interface.cpp.i
@@ -142,7 +142,7 @@ api/api_interface.i: api/api_interface.cpp.i
 
 # target to preprocess a source file
 api/api_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/api/api_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/api/api_interface.cpp.i
 .PHONY : api/api_interface.cpp.i
 
 api/api_interface.s: api/api_interface.cpp.s
@@ -150,7 +150,7 @@ api/api_interface.s: api/api_interface.cpp.s
 
 # target to generate assembly for a file
 api/api_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/api/api_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/api/api_interface.cpp.s
 .PHONY : api/api_interface.cpp.s
 
 main.o: main.cpp.o
@@ -158,7 +158,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +166,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ColoredButtonsApp.dir/build.make CMakeFiles/ColoredButtonsApp.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ColoredButtonsApp"
+	@echo "... ButtonApp"
 	@echo "... api/api_interface.o"
 	@echo "... api/api_interface.i"
 	@echo "... api/api_interface.s"

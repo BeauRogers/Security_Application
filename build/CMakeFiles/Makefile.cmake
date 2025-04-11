@@ -101,14 +101,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.21.3/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
   "/opt/homebrew/Cellar/cmake/3.21.3/share/cmake/Modules/Platform/Darwin.cmake"
   "/opt/homebrew/Cellar/cmake/3.21.3/share/cmake/Modules/Platform/UnixPaths.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLConfigVersion.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLGraphicsSharedTargets-release.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLSystemSharedTargets-release.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLSystemSharedTargets.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLWindowSharedTargets-release.cmake"
-  "/opt/homebrew/lib/cmake/SFML/SFMLWindowSharedTargets.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLConfig.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLConfigVersion.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLGraphicsSharedTargets-release.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLSystemSharedTargets-release.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLSystemSharedTargets.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLWindowSharedTargets-release.cmake"
+  "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML/SFMLWindowSharedTargets.cmake"
   )
 
 # The corresponding makefile is:
@@ -129,5 +129,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ColoredButtonsApp.dir/DependInfo.cmake"
+  "CMakeFiles/ButtonApp.dir/DependInfo.cmake"
   )

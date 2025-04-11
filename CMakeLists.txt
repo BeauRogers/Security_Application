@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.10)
-project(ColoredButtonsApp)
+project(ButtonApp)
 
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Set SFML_DIR if SFML is installed in a non-standard location
-# Uncomment and modify the path if needed
-#set(SFML_DIR "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML")
+# If you installed SFML via homebrew, this should help find it
+set(SFML_DIR "/opt/homebrew/Cellar/sfml/3.0.0_1/lib/cmake/SFML")
 
-# Find SFML package - updated for SFML 3.0
-find_package(SFML 3.0.0 COMPONENTS Graphics Window System REQUIRED)
+# Find SFML
+find_package(SFML 3.0 REQUIRED COMPONENTS Graphics Window)
 
 # Include SFML directories
 if (SFML_FOUND)
@@ -24,15 +24,18 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
 
 # Add source files
-add_executable(ColoredButtonsApp 
+add_executable(ButtonApp 
     main.cpp
     api/api_interface.cpp
 )
 
 # Link SFML libraries - updated for SFML 3.0
-target_link_libraries(ColoredButtonsApp sfml-graphics sfml-window sfml-system)
+target_link_libraries(ButtonApp sfml-graphics sfml-window sfml-system)
 
-# Print SFML information for debugging
-message(STATUS "SFML: ${SFML}")
-message(STATUS "SFML_FOUND: ${SFML_FOUND}")
-message(STATUS "SFML_DIR: ${SFML_DIR}")
+# If you're on macOS, you might need these framework links
+#if(APPLE)
+#    target_link_libraries(ButtonApp PRIVATE
+#        "-framework OpenGL"
+#        "-framework GLUT"
+#    )
+#endif()

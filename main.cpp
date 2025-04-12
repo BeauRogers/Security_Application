@@ -77,6 +77,7 @@ int main()
     Button yellowButton(xPosition, verticalSpacing * 4 + buttonHeight * 3, 
                        buttonWidth, buttonHeight, sf::Color::Yellow, "Yellow Button");
 
+    std::cout << "running while loop" << std::endl;
     while (window.isOpen())
     {
         while (const std::optional event = window.pollEvent())
@@ -85,7 +86,7 @@ int main()
             {
                 window.close();
             }
-            else if (event->is<sf::Event::MouseLeft>())//const auto* mousePressed = event->getIf<sf::Event::MouseButtonPressed>())
+            else if (event->is<sf::Event::MouseButtonPressed>())
             {
                 if (redButton.isMouseOver(window)) redButton.handleClick();
                 if (greenButton.isMouseOver(window)) greenButton.handleClick();

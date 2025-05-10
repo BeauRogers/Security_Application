@@ -27,6 +27,8 @@ include_directories(${CMAKE_SOURCE_DIR})
 add_executable(ButtonApp 
     main.cpp
     api/api_interface.cpp
+    button.cpp
+    main_screen.cpp
 )
 
 # Link SFML libraries - updated for SFML 3.0

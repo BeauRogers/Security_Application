@@ -153,6 +153,30 @@ api/api_interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/api/api_interface.cpp.s
 .PHONY : api/api_interface.cpp.s
 
+button.o: button.cpp.o
+.PHONY : button.o
+
+# target to build an object file
+button.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/button.cpp.o
+.PHONY : button.cpp.o
+
+button.i: button.cpp.i
+.PHONY : button.i
+
+# target to preprocess a source file
+button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/button.cpp.i
+.PHONY : button.cpp.i
+
+button.s: button.cpp.s
+.PHONY : button.s
+
+# target to generate assembly for a file
+button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/button.cpp.s
+.PHONY : button.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -177,6 +201,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+main_screen.o: main_screen.cpp.o
+.PHONY : main_screen.o
+
+# target to build an object file
+main_screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main_screen.cpp.o
+.PHONY : main_screen.cpp.o
+
+main_screen.i: main_screen.cpp.i
+.PHONY : main_screen.i
+
+# target to preprocess a source file
+main_screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main_screen.cpp.i
+.PHONY : main_screen.cpp.i
+
+main_screen.s: main_screen.cpp.s
+.PHONY : main_screen.s
+
+# target to generate assembly for a file
+main_screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ButtonApp.dir/build.make CMakeFiles/ButtonApp.dir/main_screen.cpp.s
+.PHONY : main_screen.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +237,15 @@ help:
 	@echo "... api/api_interface.o"
 	@echo "... api/api_interface.i"
 	@echo "... api/api_interface.s"
+	@echo "... button.o"
+	@echo "... button.i"
+	@echo "... button.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... main_screen.o"
+	@echo "... main_screen.i"
+	@echo "... main_screen.s"
 .PHONY : help
 
 

@@ -3,8 +3,12 @@ file(REMOVE_RECURSE
   "ButtonApp.pdb"
   "CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o"
   "CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o.d"
+  "CMakeFiles/ButtonApp.dir/button.cpp.o"
+  "CMakeFiles/ButtonApp.dir/button.cpp.o.d"
   "CMakeFiles/ButtonApp.dir/main.cpp.o"
   "CMakeFiles/ButtonApp.dir/main.cpp.o.d"
+  "CMakeFiles/ButtonApp.dir/main_screen.cpp.o"
+  "CMakeFiles/ButtonApp.dir/main_screen.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

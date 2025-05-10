@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/beaurogers/Documents/C++_Programming/Appa_Security/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sfml/3.0.0_1/include -I/Users/beaurogers/Documents/C++_Programming/Appa_Security -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++17 -o CMakeFiles/ButtonApp.dir/main.cpp.o -c /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp",
+  "file": "/Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp"
+},
+{
+  "directory": "/Users/beaurogers/Documents/C++_Programming/Appa_Security/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sfml/3.0.0_1/include -I/Users/beaurogers/Documents/C++_Programming/Appa_Security -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++17 -o CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o -c /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp",
+  "file": "/Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp"
+}
+]

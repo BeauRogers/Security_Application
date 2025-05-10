@@ -36,7 +36,9 @@ public:
     }
 
     void handleClick() {
-        if (name == "Red Button") {
+        if (name == "Enter") {
+            std::cout << "Enter button clicked! Transitioning to main screen..." << std::endl;
+        } else if (name == "Red Button") {
             std::cout << "Red button clicked! Starting security scan..." << std::endl;
         } else if (name == "Green Button") {
             std::cout << "Green button clicked! Initializing system check..." << std::endl;
@@ -55,19 +57,34 @@ private:
 
 int main()
 {
-    // Create a window 3 times bigger (600x600 instead of 200x200)
+    // Create a window
     sf::RenderWindow window(sf::VideoMode({600, 600}), "SFML proof of concept");
     
-    // Calculate spacing and positioning
+    // State tracking
+    bool showMainScreen = false;
+    
+    // Create the enter button (centered)
+    const float enterButtonWidth = 200;
+    const float enterButtonHeight = 80;
+    Button enterButton(
+        (600 - enterButtonWidth) / 2,  // x position (centered)
+        (600 - enterButtonHeight) / 2, // y position (centered)
+        enterButtonWidth,
+        enterButtonHeight,
+        sf::Color(100, 100, 100),     // Gray color
+        "Enter"
+    );
+
+    // Calculate spacing and positioning for main screen buttons
     const int numButtons = 4;
     const float windowWidth = 600.0f;
-    const float buttonWidth = windowWidth * 0.75f; // 75% of window width
+    const float buttonWidth = windowWidth * 0.75f;
     const float buttonHeight = 80;
     const float totalButtonsHeight = numButtons * buttonHeight;
     const float verticalSpacing = (600 - totalButtonsHeight) / (numButtons + 1);
-    const float xPosition = (windowWidth - buttonWidth) / 2; // Center horizontally
+    const float xPosition = (windowWidth - buttonWidth) / 2;
     
-    // Create buttons
+    // Create main screen buttons
     Button redButton(xPosition, verticalSpacing, 
                     buttonWidth, buttonHeight, sf::Color::Red, "Red Button");
     Button greenButton(xPosition, verticalSpacing * 2 + buttonHeight, 
@@ -77,37 +94,48 @@ int main()
     Button yellowButton(xPosition, verticalSpacing * 4 + buttonHeight * 3, 
                        buttonWidth, buttonHeight, sf::Color::Yellow, "Yellow Button");
 
-    std::cout << "running while loop" << std::endl;
     while (window.isOpen())
     {
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
-            {
                 window.close();
-            }
-            else if (event->is<sf::Event::MouseButtonPressed>())
+            
+            // Handle mouse clicks
+            if (event->is<sf::Event::MouseButtonPressed>())
             {
-                if (redButton.isMouseOver(window)) redButton.handleClick();
-                if (greenButton.isMouseOver(window)) greenButton.handleClick();
-                if (blueButton.isMouseOver(window)) blueButton.handleClick();
-                if (yellowButton.isMouseOver(window)) yellowButton.handleClick();
+                if (!showMainScreen) {
+                    if (enterButton.isMouseOver(window)) {
+                        enterButton.handleClick();
+                        showMainScreen = true;
+                    }
+                } else {
+                    if (redButton.isMouseOver(window)) redButton.handleClick();
+                    if (greenButton.isMouseOver(window)) greenButton.handleClick();
+                    if (blueButton.isMouseOver(window)) blueButton.handleClick();
+                    if (yellowButton.isMouseOver(window)) yellowButton.handleClick();
+                }
             }
         }
 
-        // Handle button hover effects
-        redButton.handleHover(window);
-        greenButton.handleHover(window);
-        blueButton.handleHover(window);
-        yellowButton.handleHover(window);
-
         window.clear();
-        
-        // Draw all buttons
-        redButton.draw(window);
-        greenButton.draw(window);
-        blueButton.draw(window);
-        yellowButton.draw(window);
+
+        if (!showMainScreen) {
+            // Draw enter button
+            enterButton.handleHover(window);
+            enterButton.draw(window);
+        } else {
+            // Draw main screen buttons
+            redButton.handleHover(window);
+            greenButton.handleHover(window);
+            blueButton.handleHover(window);
+            yellowButton.handleHover(window);
+            
+            redButton.draw(window);
+            greenButton.draw(window);
+            blueButton.draw(window);
+            yellowButton.draw(window);
+        }
         
         window.display();
     }

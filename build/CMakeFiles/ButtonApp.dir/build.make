@@ -73,29 +73,29 @@ CMakeFiles/ButtonApp.dir/main.cpp.o: CMakeFiles/ButtonApp.dir/flags.make
 CMakeFiles/ButtonApp.dir/main.cpp.o: ../main.cpp
 CMakeFiles/ButtonApp.dir/main.cpp.o: CMakeFiles/ButtonApp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ButtonApp.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ButtonApp.dir/main.cpp.o -MF CMakeFiles/ButtonApp.dir/main.cpp.o.d -o CMakeFiles/ButtonApp.dir/main.cpp.o -c /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ButtonApp.dir/main.cpp.o -MF CMakeFiles/ButtonApp.dir/main.cpp.o.d -o CMakeFiles/ButtonApp.dir/main.cpp.o -c /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp
 
 CMakeFiles/ButtonApp.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ButtonApp.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp > CMakeFiles/ButtonApp.dir/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp > CMakeFiles/ButtonApp.dir/main.cpp.i
 
 CMakeFiles/ButtonApp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ButtonApp.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp -o CMakeFiles/ButtonApp.dir/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/beaurogers/Documents/C++_Programming/Appa_Security/main.cpp -o CMakeFiles/ButtonApp.dir/main.cpp.s
 
 CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o: CMakeFiles/ButtonApp.dir/flags.make
 CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o: ../api/api_interface.cpp
 CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o: CMakeFiles/ButtonApp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o -MF CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o.d -o CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o -c /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o -MF CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o.d -o CMakeFiles/ButtonApp.dir/api/api_interface.cpp.o -c /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp
 
 CMakeFiles/ButtonApp.dir/api/api_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ButtonApp.dir/api/api_interface.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp > CMakeFiles/ButtonApp.dir/api/api_interface.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp > CMakeFiles/ButtonApp.dir/api/api_interface.cpp.i
 
 CMakeFiles/ButtonApp.dir/api/api_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ButtonApp.dir/api/api_interface.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp -o CMakeFiles/ButtonApp.dir/api/api_interface.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/beaurogers/Documents/C++_Programming/Appa_Security/api/api_interface.cpp -o CMakeFiles/ButtonApp.dir/api/api_interface.cpp.s
 
 # Object files for target ButtonApp
 ButtonApp_OBJECTS = \

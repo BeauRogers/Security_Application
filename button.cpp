@@ -33,6 +33,7 @@ void Button::handleHover(const sf::RenderWindow& window) {
 }
 
 void Button::handleClick() {
+    std::cout << "nothing" << std::endl;
     if (name == "Enter") {
         std::cout << "Enter button clicked! Transitioning to main screen..." << std::endl;
     } else if (name == "Red Button") {

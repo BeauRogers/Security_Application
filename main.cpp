@@ -4,7 +4,7 @@
 int main() {
     sf::RenderWindow window(sf::VideoMode({600, 600}), "Appa Security");
     MainScreen mainScreen(window);
-
+    
     while (window.isOpen()) 
     {
         while (const std::optional event = window.pollEvent()) {

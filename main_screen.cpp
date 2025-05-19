@@ -2,14 +2,51 @@
 #include <iostream>
 
 MainScreen::MainScreen(sf::RenderWindow& window) : window(window), isMainScreen(false) {
-    // Create the Enter button for the initial screen
-    float enterButtonWidth = window.getSize().x * 0.3f;  // 30% of window width
-    float enterButtonHeight = 50.0f;
-    float enterButtonX = (window.getSize().x - enterButtonWidth) / 2.0f;
-    float enterButtonY = (window.getSize().y - enterButtonHeight) / 2.0f;
-    
-    buttons.emplace_back(enterButtonX, enterButtonY, enterButtonWidth, enterButtonHeight, 
-                        sf::Color(100, 100, 100), "Enter");
+    loadContacts();
+    createContactButtons();
+}
+
+void MainScreen::loadContacts() {
+    try {
+        std::ifstream file("contacts.json");
+        if (!file.is_open()) {
+            std::cerr << "Error opening contacts.json" << std::endl;
+            return;
+        }
+
+        nlohmann::json json;
+        file >> json;
+
+        for (const auto& contact : json["contacts"]) {
+            Contact c;
+            c.name = contact["name"];
+            c.address = contact["address"];
+            c.phone_number = contact["phone_number"];
+            c.code_name = contact["code_name"];
+            contacts.push_back(c);
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Error loading contacts: " << e.what() << std::endl;
+    }
+}
+
+void MainScreen::createContactButtons() {
+    float buttonWidth = window.getSize().x * 0.75f;  // 75% of window width
+    float buttonHeight = 50.0f;
+    float buttonSpacing = 20.0f;
+    float totalHeight = (buttonHeight * contacts.size()) + (buttonSpacing * (contacts.size() - 1));
+    float startY = (window.getSize().y - totalHeight) / 2.0f;
+
+    for (size_t i = 0; i < contacts.size(); ++i) {
+        buttons.emplace_back(
+            (window.getSize().x - buttonWidth) / 2.0f,
+            startY + (buttonHeight + buttonSpacing) * i,
+            buttonWidth,
+            buttonHeight,
+            sf::Color(100, 100, 100),
+            contacts[i].code_name
+        );
+    }
 }
 
 void MainScreen::handleEvent(const std::optional<sf::Event>& event) {

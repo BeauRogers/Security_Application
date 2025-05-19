@@ -23,6 +23,14 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR})
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR})
 
+# Add nlohmann_json
+include(FetchContent)
+FetchContent_Declare(
+    json
+    URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz
+)
+FetchContent_MakeAvailable(json)
+
 # Add source files
 add_executable(ButtonApp 
     main.cpp
@@ -32,7 +40,7 @@ add_executable(ButtonApp
 )
 
 # Link SFML libraries - updated for SFML 3.0
-target_link_libraries(ButtonApp sfml-graphics sfml-window sfml-system)
+target_link_libraries(ButtonApp sfml-graphics sfml-window sfml-system nlohmann_json::nlohmann_json)
 
 # If you're on macOS, you might need these framework links
 #if(APPLE)

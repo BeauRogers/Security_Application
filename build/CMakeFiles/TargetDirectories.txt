@@ -1,3 +1,0 @@
-/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles/rebuild_cache.dir
-/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles/edit_cache.dir
-/Users/beaurogers/Documents/C++_Programming/Appa_Security/build/CMakeFiles/ButtonApp.dir

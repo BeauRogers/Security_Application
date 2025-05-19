@@ -23,9 +23,10 @@ void Button::draw(sf::RenderWindow& window) {
 
     // Center the text on the button
     sf::FloatRect textBounds = text.getLocalBounds();
+
     text.setPosition(
-        {(shape.getSize().x - textBounds.size.x) / 2.0f,
-        (shape.getSize().y - textBounds.size.y) / 2.0f}
+        {shape.getPosition().x + ((shape.getSize().x - textBounds.size.x) / 2.0f),
+        shape.getPosition().y + ((shape.getSize().y - textBounds.size.y) / 2.0f)}
     );
     window.draw(shape);
     window.draw(text);

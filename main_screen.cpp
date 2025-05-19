@@ -31,28 +31,28 @@ void MainScreen::handleEvent(const std::optional<sf::Event>& event) {
                     float totalHeight = (buttonHeight * 4) + (buttonSpacing * 3);
                     float startY = (window.getSize().y - totalHeight) / 2.0f;
                     
-                    // Red button
+                    // Primary button (Red)
                     buttons.emplace_back((window.getSize().x - buttonWidth) / 2.0f, 
                                        startY, buttonWidth, buttonHeight, 
-                                       sf::Color::Red, "Red Button");
+                                       sf::Color::Red, "Primary");
                     
-                    // Green button
+                    // Secondary button (Green)
                     buttons.emplace_back((window.getSize().x - buttonWidth) / 2.0f, 
                                        startY + buttonHeight + buttonSpacing, 
                                        buttonWidth, buttonHeight, 
-                                       sf::Color::Green, "Green Button");
+                                       sf::Color::Green, "Secondary");
                     
-                    // Blue button
+                    // Tertiary button (Blue)
                     buttons.emplace_back((window.getSize().x - buttonWidth) / 2.0f, 
                                        startY + (buttonHeight + buttonSpacing) * 2, 
                                        buttonWidth, buttonHeight, 
-                                       sf::Color::Blue, "Blue Button");
+                                       sf::Color::Blue, "Tertiary");
                     
-                    // Yellow button
+                    // Local Police button (Yellow)
                     buttons.emplace_back((window.getSize().x - buttonWidth) / 2.0f, 
                                        startY + (buttonHeight + buttonSpacing) * 3, 
                                        buttonWidth, buttonHeight, 
-                                       sf::Color::Yellow, "Yellow Button");
+                                       sf::Color::Yellow, "Local Police");
                 }
                 break;
             }

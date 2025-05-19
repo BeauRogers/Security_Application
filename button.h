@@ -16,6 +16,8 @@ private:
     sf::RectangleShape shape;
     sf::Color originalColor;
     std::string name;
+    std::string labelMe;
+    sf::Font font;
 };
 
 #endif // BUTTON_H 

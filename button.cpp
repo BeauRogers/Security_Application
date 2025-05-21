@@ -2,10 +2,12 @@
 #include <iostream>
 
 Button::Button(float x, float y, float width, float height, const sf::Color& color, 
-               const std::string& buttonName, const std::string& primary,
-               const std::string& secondary, const std::string& tertiary,
+               const std::string& buttonName, ButtonType type,
+               const std::string& primary,
+               const std::string& secondary,
+               const std::string& tertiary,
                const std::string& local_police) 
-    : name(buttonName), primary(primary), secondary(secondary), 
+    : name(buttonName), type(type), primary(primary), secondary(secondary), 
       tertiary(tertiary), local_police(local_police), shape() {
     shape.setSize(sf::Vector2f(width, height));
     shape.setPosition(sf::Vector2f(x, y));
@@ -55,11 +57,18 @@ void Button::handleHover(const sf::RenderWindow& window) {
 }
 
 void Button::handleClick() {
-    std::cout << "\nButton '" << name << "' clicked!" << std::endl;
-    std::cout << "Contact Information:" << std::endl;
-    std::cout << "Primary: " << primary << std::endl;
-    std::cout << "Secondary: " << secondary << std::endl;
-    std::cout << "Tertiary: " << tertiary << std::endl;
-    std::cout << "Local Police: " << local_police << std::endl;
-    std::cout << "-------------------" << std::endl;
+    if (type == ButtonType::CONTACT_LIST) {
+        std::cout << "\nContact '" << name << "' selected!" << std::endl;
+    } else if (type == ButtonType::PHONE_NUMBER) {
+        std::cout << "\n" << name << " number: ";
+        if (name == "Primary") {
+            std::cout << primary << std::endl;
+        } else if (name == "Secondary") {
+            std::cout << secondary << std::endl;
+        } else if (name == "Tertiary") {
+            std::cout << tertiary << std::endl;
+        } else if (name == "Local Police") {
+            std::cout << local_police << std::endl;
+        }
+    }
 } 

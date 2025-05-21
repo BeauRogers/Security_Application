@@ -25,6 +25,7 @@ enum screen_type {
 class MainScreen {
 public:
     MainScreen(sf::RenderWindow& window);
+    void createPhoneButtons(const Contact& contact);
     void handleEvent(const std::optional<sf::Event>& event);
     void update();
     void draw();

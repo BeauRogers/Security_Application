@@ -17,6 +17,11 @@ struct Contact {
     std::string code_name;
 };
 
+enum screen_type {
+    main_screen,
+    contact_screen
+};
+
 class MainScreen {
 public:
     MainScreen(sf::RenderWindow& window);
@@ -27,7 +32,7 @@ public:
 private:
     sf::RenderWindow& window;
     std::vector<Button> buttons;
-    bool isMainScreen;
+    screen_type currentScreen;
     std::vector<Contact> contacts;
     
     void loadContacts();

@@ -1,7 +1,7 @@
 #include "main_screen.h"
 #include <iostream>
 
-MainScreen::MainScreen(sf::RenderWindow& window) : window(window), isMainScreen(false) {
+MainScreen::MainScreen(sf::RenderWindow& window) : window(window), currentScreen(main_screen) {
     loadContacts();
     createContactButtons();
 }
@@ -63,10 +63,10 @@ void MainScreen::handleEvent(const std::optional<sf::Event>& event) {
         for (auto& button : buttons) {
             if (button.isMouseOver(window)) {
                 button.handleClick();
-                if (!isMainScreen) {
+                if (currentScreen == screen_type::main_screen) {
                     // Clear existing buttons and create the main screen buttons
                     buttons.clear();
-                    isMainScreen = true;
+                    currentScreen = contact_screen;
                     
                     // Create the four colored buttons
                     float buttonWidth = window.getSize().x * 0.75f;  // 75% of window width

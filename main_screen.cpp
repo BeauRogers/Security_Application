@@ -1,5 +1,6 @@
 #include "main_screen.h"
 #include <iostream>
+#include <variant>
 
 MainScreen::MainScreen(sf::RenderWindow& window) : window(window), currentScreen(main_screen) {
     loadContacts();
@@ -142,6 +143,16 @@ void MainScreen::createPhoneButtons(const Contact& contact) {
 }
 
 void MainScreen::handleEvent(const std::optional<sf::Event>& event) {
+    if (event->is<sf::Event::KeyPressed>()) {
+        // Check for Command+C (Ctrl+C on Windows/Linux)
+        const auto& keyEvent = event->getIf<sf::Event::KeyPressed>();
+        if (keyEvent->code == sf::Keyboard::Key::C &&
+            (keyEvent->control || keyEvent->system)) {
+            window.close();
+            return;
+        }
+    }
+
     if (event->is<sf::Event::MouseButtonPressed>()) {
         for (auto& button : buttons) {
             if (button.isMouseOver(window)) {

@@ -10,7 +10,10 @@
 struct Contact {
     std::string name;
     std::string address;
-    std::string phone_number;
+    std::string primary;
+    std::string secondary;
+    std::string tertiary;
+    std::string local_police;
     std::string code_name;
 };
 

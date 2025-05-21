@@ -6,7 +6,10 @@
 
 class Button {
 public:
-    Button(float x, float y, float width, float height, const sf::Color& color, const std::string& buttonName);
+    Button(float x, float y, float width, float height, const sf::Color& color, 
+           const std::string& buttonName, const std::string& primary = "",
+           const std::string& secondary = "", const std::string& tertiary = "",
+           const std::string& local_police = "");
     void draw(sf::RenderWindow& window);
     bool isMouseOver(const sf::RenderWindow& window);
     void handleHover(const sf::RenderWindow& window);
@@ -17,6 +20,10 @@ private:
     sf::Color originalColor;
     std::string name;
     std::string labelMe;
+    std::string primary;
+    std::string secondary;
+    std::string tertiary;
+    std::string local_police;
     sf::Font font;
 };
 

@@ -21,7 +21,10 @@ void MainScreen::loadContacts() {
             Contact c;
             c.name = contact["name"];
             c.address = contact["address"];
-            c.phone_number = contact["phone_number"];
+            c.primary = contact["primary"];
+            c.secondary = contact["secondary"];
+            c.tertiary = contact["tertiary"];
+            c.local_police = contact["local_police"];
             c.code_name = contact["code_name"];
             contacts.push_back(c);
         }
@@ -44,7 +47,11 @@ void MainScreen::createContactButtons() {
             buttonWidth,
             buttonHeight,
             sf::Color(100, 100, 100),
-            contacts[i].code_name
+            contacts[i].code_name,
+            contacts[i].primary,
+            contacts[i].secondary,
+            contacts[i].tertiary,
+            contacts[i].local_police
         );
     }
 }

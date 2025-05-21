@@ -1,9 +1,12 @@
 #include "button.h"
 #include <iostream>
 
-Button::Button(float x, float y, float width, float height, const sf::Color& color, const std::string& buttonName) 
-    : name(buttonName), 
-    shape() {
+Button::Button(float x, float y, float width, float height, const sf::Color& color, 
+               const std::string& buttonName, const std::string& primary,
+               const std::string& secondary, const std::string& tertiary,
+               const std::string& local_police) 
+    : name(buttonName), primary(primary), secondary(secondary), 
+      tertiary(tertiary), local_police(local_police), shape() {
     shape.setSize(sf::Vector2f(width, height));
     shape.setPosition(sf::Vector2f(x, y));
     shape.setFillColor(color);
@@ -52,16 +55,11 @@ void Button::handleHover(const sf::RenderWindow& window) {
 }
 
 void Button::handleClick() {
-    std::cout << "nothing" << std::endl;
-    if (name == "Enter") {
-        std::cout << "Enter button clicked! Transitioning to main screen..." << std::endl;
-    } else if (name == "Primary") {
-        std::cout << "Primary button clicked! Starting security scan..." << std::endl;
-    } else if (name == "Secondary") {
-        std::cout << "Secondary button clicked! Initializing system check..." << std::endl;
-    } else if (name == "Tertiary") {
-        std::cout << "Tertiary button clicked! Running diagnostics..." << std::endl;
-    } else if (name == "Local Police") {
-        std::cout << "Local Police button clicked! Generating report..." << std::endl;
-    }
+    std::cout << "\nButton '" << name << "' clicked!" << std::endl;
+    std::cout << "Contact Information:" << std::endl;
+    std::cout << "Primary: " << primary << std::endl;
+    std::cout << "Secondary: " << secondary << std::endl;
+    std::cout << "Tertiary: " << tertiary << std::endl;
+    std::cout << "Local Police: " << local_police << std::endl;
+    std::cout << "-------------------" << std::endl;
 } 

@@ -9,7 +9,8 @@ class Button {
 public:
     enum class ButtonType {
         CONTACT_LIST,
-        PHONE_NUMBER
+        PHONE_NUMBER,
+        BACK
     };
 
     Button(float x, float y, float width, float height, const sf::Color& color, 

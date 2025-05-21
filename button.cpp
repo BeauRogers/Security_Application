@@ -70,5 +70,7 @@ void Button::handleClick() {
         } else if (name == "Local Police") {
             std::cout << local_police << std::endl;
         }
+    } else if (type == ButtonType::BACK) {
+        std::cout << "\nReturning to contact list..." << std::endl;
     }
 } 

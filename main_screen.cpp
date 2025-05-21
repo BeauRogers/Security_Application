@@ -62,13 +62,28 @@ void MainScreen::createPhoneButtons(const Contact& contact) {
     float buttonWidth = window.getSize().x * 0.75f;
     float buttonHeight = 50.0f;
     float buttonSpacing = 20.0f;
-    float totalHeight = (buttonHeight * 4) + (buttonSpacing * 3);
+    float totalHeight = (buttonHeight * 5) + (buttonSpacing * 4); // Added space for back button
     float startY = (window.getSize().y - totalHeight) / 2.0f;
+
+    // Back button (Gray)
+    buttons.emplace_back(
+        (window.getSize().x - buttonWidth) / 2.0f,
+        startY,
+        buttonWidth,
+        buttonHeight,
+        sf::Color(128, 128, 128), // Gray color
+        "Back to Contacts",
+        Button::ButtonType::BACK,
+        contact.primary,
+        contact.secondary,
+        contact.tertiary,
+        contact.local_police
+    );
 
     // Primary button (Red)
     buttons.emplace_back(
         (window.getSize().x - buttonWidth) / 2.0f,
-        startY,
+        startY + buttonHeight + buttonSpacing,
         buttonWidth,
         buttonHeight,
         sf::Color::Red,
@@ -83,7 +98,7 @@ void MainScreen::createPhoneButtons(const Contact& contact) {
     // Secondary button (Green)
     buttons.emplace_back(
         (window.getSize().x - buttonWidth) / 2.0f,
-        startY + buttonHeight + buttonSpacing,
+        startY + (buttonHeight + buttonSpacing) * 2,
         buttonWidth,
         buttonHeight,
         sf::Color::Green,
@@ -98,7 +113,7 @@ void MainScreen::createPhoneButtons(const Contact& contact) {
     // Tertiary button (Blue)
     buttons.emplace_back(
         (window.getSize().x - buttonWidth) / 2.0f,
-        startY + (buttonHeight + buttonSpacing) * 2,
+        startY + (buttonHeight + buttonSpacing) * 3,
         buttonWidth,
         buttonHeight,
         sf::Color::Blue,
@@ -113,7 +128,7 @@ void MainScreen::createPhoneButtons(const Contact& contact) {
     // Local Police button (Yellow)
     buttons.emplace_back(
         (window.getSize().x - buttonWidth) / 2.0f,
-        startY + (buttonHeight + buttonSpacing) * 3,
+        startY + (buttonHeight + buttonSpacing) * 4,
         buttonWidth,
         buttonHeight,
         sf::Color::Yellow,
@@ -140,6 +155,12 @@ void MainScreen::handleEvent(const std::optional<sf::Event>& event) {
                             break;
                         }
                     }
+                } else if (currentScreen == screen_type::contact_screen && 
+                          button.getType() == Button::ButtonType::BACK) {
+                    // Clear buttons first, then change screen and create new buttons
+                    buttons.clear();
+                    currentScreen = main_screen;
+                    createContactButtons();
                 }
                 break;
             }

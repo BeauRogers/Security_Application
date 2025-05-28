@@ -1,5 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
+import sys
 
 # --- Replace these with your actual values ---
 api_key = "19885dcdd056ed5419c7a070db2e88bc906e84e8dbbda6b7"
@@ -8,14 +9,14 @@ subdomain = "api.in.exotel.com"  # or whatever your actual subdomain is
 sid = "your_sid"
 
 
-def connect_call():
+def connect_call(desiredNumber):
     # Endpoint URL
     url = f"https://{subdomain}/v1/Accounts/{sid}/Calls/connect"
 
     # Request payload (adjust based on API docs)
     payload = {
         "From": "your_verified_number",     # e.g., "+14155552671"
-        "To": "destination_number",         # e.g., "+918123456789"
+        "To": desiredNumber,         # e.g., "+918123456789"
         "CallerId": "your_caller_id",       # e.g., Exotel virtual number
         "CallType": "trans"                 # or "promo", depending on API
     }
@@ -60,9 +61,7 @@ def make_call():
 
 # Run the functions
 if __name__ == "__main__":
-    #print("Running GET example:")
-    #get_account_info()
-    #print("\nRunning POST example:")
-    #make_call()
-    print("\nConnect Call:")
-    connect_call()
+    if len(sys.argv) < 2:
+        print("Error: Phone number required")
+        sys.exit(1)
+    connect_call(sys.argv[1])

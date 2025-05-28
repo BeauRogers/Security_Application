@@ -64,8 +64,8 @@ void Button::handleClick() {
         std::cout << "\n" << name << " number: ";
         if (name == "Primary") {
             std::cout << primary << std::endl;
-            // Execute the Python script
-            std::string command = "python3 ExotelApI/exotel_api_call.py";
+            // Execute the Python script with the phone number
+            std::string command = "python3 ExotelApI/exotel_api_call.py \"" + primary + "\"";
             int result = std::system(command.c_str());
             if (result != 0) {
                 std::cerr << "Failed to execute Python script" << std::endl;

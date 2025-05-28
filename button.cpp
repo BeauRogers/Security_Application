@@ -1,5 +1,6 @@
 #include "button.h"
 #include <iostream>
+#include <cstdlib>
 
 Button::Button(float x, float y, float width, float height, const sf::Color& color, 
                const std::string& buttonName, ButtonType type,
@@ -63,6 +64,12 @@ void Button::handleClick() {
         std::cout << "\n" << name << " number: ";
         if (name == "Primary") {
             std::cout << primary << std::endl;
+            // Execute the Python script
+            std::string command = "python3 ExotelApI/exotel_api_call.py";
+            int result = std::system(command.c_str());
+            if (result != 0) {
+                std::cerr << "Failed to execute Python script" << std::endl;
+            }
         } else if (name == "Secondary") {
             std::cout << secondary << std::endl;
         } else if (name == "Tertiary") {

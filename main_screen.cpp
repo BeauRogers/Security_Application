@@ -1,6 +1,7 @@
 #include "main_screen.h"
 #include <iostream>
 #include <variant>
+#include <cstdlib>
 
 MainScreen::MainScreen(sf::RenderWindow& window) : window(window), currentScreen(main_screen) {
     loadContacts();
@@ -166,12 +167,13 @@ void MainScreen::handleEvent(const std::optional<sf::Event>& event) {
                             break;
                         }
                     }
-                } else if (currentScreen == screen_type::contact_screen && 
-                          button.getType() == Button::ButtonType::BACK) {
-                    // Clear buttons first, then change screen and create new buttons
-                    buttons.clear();
-                    currentScreen = main_screen;
-                    createContactButtons();
+                } else if (currentScreen == screen_type::contact_screen) {
+                    if (button.getType() == Button::ButtonType::BACK) {
+                        // Clear buttons first, then change screen and create new buttons
+                        buttons.clear();
+                        currentScreen = main_screen;
+                        createContactButtons();
+                    }
                 }
                 break;
             }
